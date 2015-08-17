@@ -20,8 +20,8 @@ else
     fi
     origAS=`whois $net 2>/dev/null | grep AS[0-9] | tail -1 | cut -d: -f2 | sed 's|,||'`
     if test -z "$origAS"; then
-	wget "http://www.tcpiputils.com/browse/ip-address/$net" -O $TMPFILE >/dev/null 2>&1
-	origAS=AS`grep /browse/as/ $TMPFILE | sed 's|.*/browse/as/\([0-9]*\).*|\1|'`
+	wget "https://www.ultratools.com/tools/asnInfoResult?domainName=$net" -O $TMPFILE >/dev/null 2>&1
+	origAS=AS`grep tool-results-heading $TMPFILE | sed 's|.*tool-results-heading[^>]*AS\([0-9]*\).*|\1|'`
 	rm -f $TMPFILE
     fi
 fi
