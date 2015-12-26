@@ -3,7 +3,7 @@
 List networks related to a given AS number, or IP address.
 
 In theory, you should be able to watch for regular expressions in your webserver
-(or whatever) logs, grep suspicious ones, pipe them to `asls, then either add
+(or whatever) logs, grep suspicious ones, pipe them to `asls`, then either add
 rules to your firewall, or directives to your webserver configuration, ...
 
 In practice, give it a try:
